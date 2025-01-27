@@ -112,6 +112,8 @@ module apb_interrupt_cntrl
 
   assign core_irq_req_o = |(r_int & r_mask);
 
+  //TODO:The use of `generic_fifo` is declared deprecated. 
+  // Replace with `fifo_v3` design.
   generic_fifo #(
     .DATA_WIDTH(8),
     .DATA_DEPTH(4)
